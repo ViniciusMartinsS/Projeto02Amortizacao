@@ -4,8 +4,8 @@
     
 </style>
 <div>
-    <a href="#Home.jsp">Home</a>
-    |<a href="#amortizacao-constante.jsp">Amortização constante</a>
-    |<a href="#amortizacao-americana.jsp">Amortização Americana</a>
-    |<a href="#tabela-price.jsp">Tabela Price</a>
+    <a href="Home.jsp">Home</a>
+    |<a href="amortizacao-constante.jsp">Amortização constante</a>
+    |<a href="amortizacao-americana.jsp">Amortização Americana</a>
+    |<a href="tabela-price.jsp">Tabela Price</a>
 </div>
