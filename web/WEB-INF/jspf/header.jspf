@@ -1,0 +1,8 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div>
+    <a href="Home.jsp">Home</a>
+    <a href="amortizacao-constante.jsp">Amortização constante</a>
+    <a href="amortizacao-americana.jsp">Amortização Americana</a>
+    <a href="tabela-price.jsp">Tabela Price</a>
+</div>

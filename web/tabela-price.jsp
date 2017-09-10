@@ -7,6 +7,7 @@
         <title>Tabela Price</title>
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/header.jspf"%>
         <!--Titulo do sistema-->
         <h2 style='color: blue'>Sistema Francês De Amortização (Tabela Price)</h2>
         
@@ -86,7 +87,7 @@
                         <%}%>
                         <td>R$ <%=(df.format(amortizacao[i]))%></td>
                         <td>R$ <%=(df.format(jurosS[i]))%></td>
-                        <td>R$ <%=(df.format(prestacao))%></td
+                        <td>R$ <%=(df.format(prestacao))%></td>
                    </tr>
                     <%}%>
                     

@@ -7,6 +7,7 @@
         <title>Amortização Constante</title>
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/header.jspf"%>
         <!--Titulo do sistema-->
         <h2 style='color: blue'>Sistema De Amortização Constante</h2>
         
@@ -83,7 +84,7 @@
                         <%}%>
                         <td>R$ <%=(df.format(amortizacao))%></td>
                         <td>R$ <%=(df.format(jurosS[i]))%></td>
-                        <td>R$ <%=(df.format(prestacao[i]))%></td
+                        <td>R$ <%=(df.format(prestacao[i]))%></td>
                    </tr>
                     <%}%>
                     <!--Parte do TOTAL da tabela -->
