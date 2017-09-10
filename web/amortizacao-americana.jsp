@@ -7,7 +7,7 @@
         <title>Amortização Americana</title>
     </head>
     <body>
-        <h2>Sistema De Amortização Americana</h2>
+        <h2 style='color: blue'>Sistema De Amortização Americana</h2>
          <%@include file="WEB-INF/jspf/header.jspf"%>
          <%
             //declaração e tratamentos da variavies do usuario
