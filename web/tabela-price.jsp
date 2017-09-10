@@ -7,10 +7,9 @@
         <title>Tabela Price</title>
     </head>
     <body>
-        <%@include file="WEB-INF/jspf/header.jspf"%>
         <!--Titulo do sistema-->
         <h2 style='color: blue'>Sistema Francês De Amortização (Tabela Price)</h2>
-        
+         <%@include file="WEB-INF/jspf/header.jspf"%>
         <%
             //Inicializando as variáveis
         double emprestimo = 10;

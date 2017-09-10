@@ -7,10 +7,10 @@
         <title>Amortização Americana</title>
     </head>
     <body>
-        <%@include file="WEB-INF/jspf/header.jspf"%>
         <h2>Sistema De Amortização Americana</h2>
+         <%@include file="WEB-INF/jspf/header.jspf"%>
          <%
-            //declaração e tratamentos da variavies
+            //declaração e tratamentos da variavies do usuario
             double amortA = 10;
             double emprest = 10;
             double taxames = 10;
@@ -26,6 +26,7 @@
             }catch(Exception ex){}
 
         %>
+        <!--Formulario para entreada de dados do ussuario-->
         <form name="frmvalores">
             Valor do emprestimo:<br><input type="text" name="emprest" value="" placeholder="R$"/>
             <br>
@@ -46,7 +47,7 @@
             double amortizacao[] = new double [quantparcelas];
             double totaljuros = juros[0];
             double totalprestacao = prestacao[0];
-            saldodevedor[0] = emprest;//calculo da primeira linha da tabela
+            saldodevedor[0] = emprest;
             juros[0] = saldodevedor[0] * taxames;
             prestacao[0] = juros[0];
             amortizacao[0] = emprest;
@@ -59,19 +60,20 @@
         %>
         <table border="1">
             <tr><th>Meses</th><th>Saldo Devedor</th><th>Amortização</th><th>Juros</th><th>Prestação</th></tr>
-            <tr>
+            <tr>    
+                    <!--Bloco responsavel pela primeira linha da tabela-->
                     <td>0</td>
                     <td>R$ <%=(df.format(saldodevedor[0]))%></td>
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
                     </tr>
-                    
+                    <!--For que incere os valores na tabela-->
                     <%for(int i = 0; i <quantparcelas; i++){ %>
                    <tr>
                         <td><%=(i+1)%></td>
                         <%if((i+1) == quantparcelas){%>
-                        <td>&emsp;R$ 0,00</td>
+                        <td>R$ 0,00</td>
                         <%} else{ %>
                         <td>R$ <%=(df.format(saldodevedor[i+1]))%></td>
                         <%}%>
@@ -81,6 +83,7 @@
                     </tr>
                     <%}%>
                     <tr>
+                        <!--Bloco responsavel pela ultima linha da tabela-->
                         <th><strong>Total:</strong></th>
                         <td>-</td>
                         <td style="color:green">R$ <%=(df.format("amortizacao"))%></td>
