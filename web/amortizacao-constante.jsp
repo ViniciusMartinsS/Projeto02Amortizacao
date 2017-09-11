@@ -1,49 +1,16 @@
+<%@include file="WEB-INF/jspf/header.jspf"%>
+<%@include file="WEB-INF/jspf/menu.jspf"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <center><b style="color:black"> <%@include file="WEB-INF/jspf/header.jspf"%></b></center>
         <title>Amortização Constante</title>
-              <style>
-            #h1{
-                color: white;
-                width: 100%;
-                height: 20px;
-                background-color: #009999;
-                font-family: verdana;
-                font-size: 100%;
-                position: inherit;
-                border: 1px solid;
-                text-align: center;
-                
-            }
-            #equipe{
-                font-family: verdana;
-                
-            }
-            #rodapes{
-                color: white;
-                width: 100%;
-                height: 20px;
-                background-color: #009999;
-                font-family: verdana;
-                font-size: 100%;
-                border: 1px solid;
-                text-align: center;
-                position: fixed;
-                bottom: 0;
-                left: 0; 
-                
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <center><body style="background-color:gainsboro;">
-             <header id="h1">Aplicação Web para calculo de amortização</header>
-        <!--Titulo do sistema-->
-        <h2 style='color: blue'>Sistema De Amortização Constante</h2>
-        
+    <body style="background-color:gainsboro;">
+        <center>
+            <h2 style='color: blue'>Sistema De Amortização Constante</h2>
         <%
             //Inicializando as variáveis
         double emprestimo = 10;
@@ -135,8 +102,7 @@
                         request.getParameter("nprestacao") == ""){%>
                         <h3 style="color:red">Erro, Insira todos os dados no formulário!</h3>
                 <%}%>
-                <footer id="rodapes">
-            Projeto - Programação orientado a objeto
-          </footer>
-    </body></center>
+               <%@include file="WEB-INF/jspf/footer.jspf"%>
+        </center>
+    </body>
 </html>

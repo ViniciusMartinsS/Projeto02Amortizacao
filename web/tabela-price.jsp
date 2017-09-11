@@ -1,43 +1,12 @@
+<%@include file="WEB-INF/jspf/header.jspf"%>
+<%@include file="WEB-INF/jspf/menu.jspf"%>
 <%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <center><b style="color:black"> <%@include file="WEB-INF/jspf/header.jspf"%></b></center> 
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Tabela Price</title>
-        <style>
-            #h1{
-                color: white;
-                width: 100%;
-                height: 20px;
-                background-color: #009999;
-                font-family: verdana;
-                font-size: 100%;
-                position: inherit;
-                border: 1px solid;
-                text-align: center;
-                
-            }
-            #equipe{
-                font-family: verdana;
-                
-            }
-            #rodapes{
-                color: white;
-                width: 100%;
-                height: 20px;
-                background-color: #009999;
-                font-family: verdana;
-                font-size: 100%;
-                border: 1px solid;
-                text-align: center;
-                position: fixed;
-                bottom: 0;
-                left: 0; 
-                
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body style="background-color:gainsboro;">
          <header id="h1">Aplicação Web para calculo de amortização</header>
