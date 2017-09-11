@@ -3,13 +3,49 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <center><b style="color:black"> <%@include file="WEB-INF/jspf/header.jspf"%></b></center> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Tabela Price</title>
+        <style>
+            #h1{
+                color: white;
+                width: 100%;
+                height: 20px;
+                background-color: #009999;
+                font-family: verdana;
+                font-size: 100%;
+                position: inherit;
+                border: 1px solid;
+                text-align: center;
+                
+            }
+            #equipe{
+                font-family: verdana;
+                
+            }
+            #rodapes{
+                color: white;
+                width: 100%;
+                height: 20px;
+                background-color: #009999;
+                font-family: verdana;
+                font-size: 100%;
+                border: 1px solid;
+                text-align: center;
+                position: fixed;
+                bottom: 0;
+                left: 0; 
+                
+            }
+        </style>
     </head>
-    <body>
+    <body style="background-color:gainsboro;">
+         <header id="h1">Aplicação Web para calculo de amortização</header>
+         
         <!--Titulo do sistema-->
-        <h2 style='color: blue'>Sistema Francês De Amortização (Tabela Price)</h2>
-         <%@include file="WEB-INF/jspf/header.jspf"%>
+      
+   <center><h2 style='color: blue'>Sistema Francês De Amortização (Tabela Price)</h2></center>
+        
         <%
             //Inicializando as variáveis
         double emprestimo = 10;
@@ -26,7 +62,7 @@
         }
         %>
         <!--Recebendo valores pelo form -->
-        <form>
+        <center><form>
             Valor do empréstimo:<br/> 
             <input type="number" value="" name="emprestimo" min ="1" step="0.01" placeholder="R$"/><br/>
             Quantidade de parcelas:<br/>
@@ -35,7 +71,7 @@
             <input type="number" value="" name="juros" min ="1" step="0.01" placeholder="%"/><br/>
             <input type="submit" value="Enviar" name="btnenviar"/> &emsp; &emsp;
             <input type="reset" value="Limpar" name="btnlimpar"/>
-        </form>
+        </form></center>
         <!--Processando dados-->
         <%
         DecimalFormat df = new DecimalFormat("###,###.00");//Valor ficar igual ao real
@@ -63,7 +99,7 @@
        
          <% if(request.getParameter("btnenviar") != null){ %>
          <hr/>
-                <table border = "1">
+               <center> <table border = "1">
                    
                     <tr><th>Meses</th><th>Saldo Devedor</th><th>Amortização</th><th>Juros</th><th>Prestação</th></tr>
                     <!-- Mês 0, onde ele tira o emprestimo -->
@@ -98,11 +134,15 @@
                        <td style="color:green">R$ <%=(df.format(totaljuros))%></td>
                        <td style="color:green">R$ <%=(df.format(prestacao * nprestacao))%></td>
                     </tr>
-                </table>
+                </table></center>
 <%}%>
                 <%if(request.getParameter("juros") == "" || request.getParameter("emprestimo") == ""|| 
                         request.getParameter("nprestacao") == ""){%>
-                        <h3 style="color:red">Erro, Insira todos os dados no formulário!</h3>
+                        <center> <h3 style="color:red">Erro, Insira todos os dados no formulário!</h3></center>
                 <%}%>
+            
+            <footer id="rodapes">
+            Projeto - Programação orientado a objeto
+          </footer>
     </body>
 </html>
