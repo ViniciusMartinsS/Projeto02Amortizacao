@@ -9,27 +9,23 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body style="background-color:gainsboro;">
-         <header id="h1">Aplicação Web para calculo de amortização</header>
-         
-        <!--Titulo do sistema-->
-      
-   <center><h2 style='color: blue'>Sistema Francês De Amortização (Tabela Price)</h2></center>
-        
-        <%
-            //Inicializando as variáveis
-        double emprestimo = 10;
-        int nprestacao = 10;
-        double juros = 10;
-        
-        //try and catch para pegar os valores inseridos pelo user via form
-        try{
-            emprestimo = Double.parseDouble(request.getParameter("emprestimo"));
-            nprestacao = Integer.parseInt(request.getParameter("nprestacao"));
-            juros = Double.parseDouble(request.getParameter("juros"));
-        }catch(Exception ex){
-           
-        }
-        %>
+        <center>
+            <h2 style='color: black'>Sistema Francês De Amortização (Tabela Price)</h2>
+            <%
+                //Inicializando as variáveis
+            double emprestimo = 10;
+            int nprestacao = 10;
+            double juros = 10;
+
+            //try and catch para pegar os valores inseridos pelo user via form
+            try{
+                emprestimo = Double.parseDouble(request.getParameter("emprestimo"));
+                nprestacao = Integer.parseInt(request.getParameter("nprestacao"));
+                juros = Double.parseDouble(request.getParameter("juros"));
+            }catch(Exception ex){
+
+            }
+            %>
         <!--Recebendo valores pelo form -->
         <center><form>
             Valor do empréstimo:<br/> 
@@ -110,8 +106,7 @@
                         <center> <h3 style="color:red">Erro, Insira todos os dados no formulário!</h3></center>
                 <%}%>
             
-            <footer id="rodapes">
-            Projeto - Programação orientado a objeto
-          </footer>
+       <%@include file="WEB-INF/jspf/footer.jspf"%>         
+        </center>
     </body>
 </html>

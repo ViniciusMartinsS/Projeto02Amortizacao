@@ -10,7 +10,7 @@
     </head>
     <body style="background-color:gainsboro;">
         <center>
-            <h2 style='color: blue'>Sistema De Amortização Constante</h2>
+            <h2 style='color: black'>Sistema De Amortização Constante</h2>
         <%
             //Inicializando as variáveis
         double emprestimo = 10;

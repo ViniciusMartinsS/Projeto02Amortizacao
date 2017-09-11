@@ -10,7 +10,7 @@
     </head>
     <body style="background-color:gainsboro;">
         <center>
-            <h2 style='color: blue'>Sistema De Amortização Americana</h2>
+            <h2 style='color: black'>Sistema De Amortização Americana</h2>
          <%
             //declaração e tratamentos da variavies do usuario
             double amortA = 10;
