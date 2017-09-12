@@ -61,6 +61,10 @@
                     }
 
         %>
+        <%if(request.getParameter("juros") == "" || request.getParameter("emprestimo") == ""|| 
+                        request.getParameter("nprestacao") == ""){%>
+                        <center> <h3 style="color:red">Erro, Insira todos os dados no formulário!</h3></center>
+                <%}%>
        
          <% if(request.getParameter("btnenviar") != null){ %>
          <hr/>
@@ -101,10 +105,7 @@
                     </tr>
                 </table></center>
 <%}%>
-                <%if(request.getParameter("juros") == "" || request.getParameter("emprestimo") == ""|| 
-                        request.getParameter("nprestacao") == ""){%>
-                        <center> <h3 style="color:red">Erro, Insira todos os dados no formulário!</h3></center>
-                <%}%>
+           
             
        <%@include file="WEB-INF/jspf/footer.jspf"%>         
         </center>

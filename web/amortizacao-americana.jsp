@@ -60,6 +60,12 @@
                 totalprestacao = totalprestacao + prestacao[0];
             }
         %>
+        
+                          <%if(request.getParameter("taxames") == "" || request.getParameter("emprest") == ""|| 
+                        request.getParameter("quantparcelas") == ""){%>
+                        <h3 style="color:red">Erro, Insira todos os dados no formulário!</h3>
+                <%}%>
+        
         <% if(request.getParameter("idform") != null){ %>
         <hr/>
         <table border="1">
@@ -77,7 +83,7 @@
                    <tr>
                         <td><%=(i+1)%></td>
                         <%if((i+1) == quantparcelas){%>
-                        <td>R$ 0,00</td>
+                        <td>&emsp;R$ 0,00</td>
                         <%} else{ %>
                         <td>R$ <%=(df.format(saldodevedor[0]))%></td>
                         <%}%>
@@ -104,10 +110,7 @@
                     </tr>
         </table>
                      <%}%>    
-                                     <%if(request.getParameter("taxames") == "" || request.getParameter("emprest") == ""|| 
-                        request.getParameter("quantparcelas") == ""){%>
-                        <h3 style="color:red">Erro, Insira todos os dados no formulário!</h3>
-                <%}%>
+                   
                 <%@include file="WEB-INF/jspf/footer.jspf"%>
         </center>
     </body>

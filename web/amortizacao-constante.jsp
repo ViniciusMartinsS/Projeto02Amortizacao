@@ -4,10 +4,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    
     <head>
         <title>Amortização Constante</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
+    
     <body style="background-color:gainsboro;">
         <center>
             <h2 style='color: black'>Sistema De Amortização Constante</h2>
@@ -60,7 +62,10 @@
         }
        
         %>
-        
+         <%if(request.getParameter("juros") == "" || request.getParameter("emprestimo") == ""|| 
+                        request.getParameter("nprestacao") == ""){%>
+                        <h3 style="color:red">Erro, Insira todos os dados no formulário!</h3>
+         <%}%>
         <% if(request.getParameter("btnenviar") != null){ %> <!-- Verificação de form vazio-->
                 <hr/>
                 <table border = "1">
@@ -98,10 +103,8 @@
                 </table>                     
                 <%}%>
                 
-                <%if(request.getParameter("juros") == "" || request.getParameter("emprestimo") == ""|| 
-                        request.getParameter("nprestacao") == ""){%>
-                        <h3 style="color:red">Erro, Insira todos os dados no formulário!</h3>
-                <%}%>
+               
+               
                <%@include file="WEB-INF/jspf/footer.jspf"%>
         </center>
     </body>

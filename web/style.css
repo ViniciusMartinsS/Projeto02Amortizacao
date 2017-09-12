@@ -3,7 +3,7 @@ html,body{
     margin:0;
     padding:0;
     background-color:gainsboro;
-    font-family: verdana;
+    margin-bottom: 50px;
 }
 nav{
     float:right;
@@ -27,13 +27,16 @@ header{
     border: 1px solid;
     text-align: left;
     z-index: 1;
+    
 }
 
 #titulo{
     margin-top:0.5%;
     margin-left: 2%;
     font-weight: 200;
-    font-size: 1.2em;
+    font-size: 1em;
+    font-family: verdana;
+    
 }
 
             #equipe{
@@ -47,7 +50,7 @@ header{
 footer{
                 color: white;
                 width:99.9%;
-                height: 50px;
+                height: 30px;
                 background-color: #008B8B;
                 font-family: verdana;
                 font-size: 1em;

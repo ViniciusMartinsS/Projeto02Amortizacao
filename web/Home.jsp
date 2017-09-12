@@ -10,6 +10,7 @@
     <body>
 
         <!--h2>Instregrantes do grupo:</h2-->
+        
         <div id="equipe">
         <h3>Sobre a aplicação:</h3>
         <p>Aplicação web voltada para calcular a amortização de 3 diferente 
